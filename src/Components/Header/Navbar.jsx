@@ -8,7 +8,7 @@ import { AuthContext } from "../Context/AuthContext/AuthContext";
 import { toast } from "react-hot-toast";
 const Navbar = () => {
   const navigate = useNavigate();
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut, loading } = useContext(AuthContext);
   const handleLogOut = async () => {
     try {
       await logOut();
@@ -18,6 +18,16 @@ const Navbar = () => {
       toast.error(error.message || "Logout Failed");
     }
   };
+
+   if (loading) {
+    return (
+      <div className="flex justify-center items-center h-20">
+        <span className="loading loading-spinner text-neutral"></span>
+        <p className="ml-2 text-lg font-semibold">Loading...</p>
+      </div>
+    );
+  }
+
   return (
     <nav className="bg-base-100 lg:max-w-10/12 lg:mx-auto  mx-5 flex flex-col">
       <div className="navbar  ">

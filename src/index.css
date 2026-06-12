@@ -4,3 +4,21 @@
 .active{
     @apply underline
 }
+
+/* Swiper navigation button color override */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+}
+
+/* সব dot white */
+.swiper-pagination-bullet {
+  background-color: white !important;
+  opacity: 0.6; 
+}
+
+/* active dot white + full opacity */
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+  opacity: 1;
+}
