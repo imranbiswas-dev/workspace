@@ -1,9 +1,23 @@
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import logo from "../../assets/Logo/work.png";
 import { GoChevronDown } from "react-icons/go";
 import SearchBar from "../SearchBox/SearchBar";
 import { MdLibraryAdd } from "react-icons/md";
+import { useContext } from "react";
+import { AuthContext } from "../Context/AuthContext/AuthContext";
+import { toast } from "react-hot-toast";
 const Navbar = () => {
+  const navigate = useNavigate();
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = async () => {
+    try {
+      await logOut();
+      toast.success("Logout Successful!");
+      navigate("/login");
+    } catch (error) {
+      toast.error(error.message || "Logout Failed");
+    }
+  };
   return (
     <nav className="bg-base-100 lg:max-w-10/12 lg:mx-auto  mx-5 flex flex-col">
       <div className="navbar  ">
@@ -46,44 +60,73 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end">
-          <div className="mr-2 flex gap-3 ">
-            <SearchBar />
-            <button className="btn btn-neutral rounded-2xl hidden sm:flex">
-              <MdLibraryAdd size={19} /> Add Job
-            </button>
-          </div>
+          {user ? (
+            <div className="flex">
+              <div className="mr-2 flex gap-3 ">
+                <SearchBar />
+                <button className="btn btn-neutral rounded-2xl hidden sm:flex">
+                  <MdLibraryAdd size={19} /> Add Job
+                </button>
+              </div>
 
-          <div className="dropdown dropdown-end">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle avatar"
-            >
-              <div className="w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-                />
+              <div className="dropdown dropdown-end">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn btn-ghost btn-circle avatar"
+                >
+                  <div className="w-10 rounded-full">
+                    <img
+                      alt="User Profile"
+                      src={
+                        user?.photoURL
+                          ? user?.photoURL
+                          : "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                      }
+                      className="rounded-full"
+                    />
+                  </div>
+                </div>
+                <ul
+                  tabIndex="-1"
+                  className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                >
+                  <li>
+                    <a className="justify-between">
+                      Profile
+                      <span className="badge">New</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>Settings</a>
+                  </li>
+                  <li>
+                    <button
+                      className="btn btn-neutral hover:btn-error btn-sm text-white"
+                      onClick={handleLogOut}
+                    >
+                      Logout
+                    </button>
+                  </li>
+                </ul>
               </div>
             </div>
-            <ul
-              tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-            >
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a>Settings</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
-            </ul>
-          </div>
+          ) : (
+            <div className="flex gap-3">
+              <Link
+                to="/login"
+                className="btn btn-neutral  btn-ghost text-lg hover:rounded-2xl"
+              >
+                Login
+              </Link>
+              <Link
+                to="/signUp"
+                className="btn btn-neutral  text-lg rounded-2xl p-5"
+              >
+                Register
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </nav>
