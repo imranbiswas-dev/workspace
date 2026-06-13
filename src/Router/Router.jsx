@@ -4,6 +4,7 @@ import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Login from "../Pages/Authentication/Login";
 import SignUp from "./../Pages/Authentication/SignUp";
+import AddJob from "../Pages/AddJob";
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
       {
         path: "/signUp",
         Component: SignUp,
+      },
+      {
+        path: "/add-job",
+        Component: AddJob,
       },
     ],
   },

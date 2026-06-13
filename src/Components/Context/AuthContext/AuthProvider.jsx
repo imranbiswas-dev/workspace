@@ -41,9 +41,17 @@ const AuthProvider = ({ children }) => {
   };
 
   // === User Observer === \\
+  // === User Observer === \\
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
+    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+      if (currentUser) {
+        // গুগলের লেটেস্ট প্রোফাইল ডাটা ফোর্সফুলি রিলোড করা হচ্ছে
+        await currentUser.reload();
+        // রিলোড হওয়ার পর ফ্রেশ কারেন্ট ইউজারকে সেট করা হচ্ছে
+        setUser(auth.currentUser);
+      } else {
+        setUser(null);
+      }
       setLoading(false);
     });
 

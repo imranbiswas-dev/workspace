@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -18,7 +17,7 @@ import Freelance from "../Slider/Freelance";
 
 const Hero = () => {
   return (
-    <>
+    <div>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -53,7 +52,7 @@ const Hero = () => {
           <DigitalMarketing />
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 

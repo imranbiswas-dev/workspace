@@ -19,7 +19,7 @@ const Navbar = () => {
     }
   };
 
-   if (loading) {
+  if (loading) {
     return (
       <div className="flex justify-center items-center h-20">
         <span className="loading loading-spinner text-neutral"></span>
@@ -27,6 +27,8 @@ const Navbar = () => {
       </div>
     );
   }
+
+  console.log("Current User:", user)
 
   return (
     <nav className="bg-base-100 lg:max-w-10/12 lg:mx-auto  mx-5 flex flex-col">
@@ -74,12 +76,15 @@ const Navbar = () => {
             <div className="flex">
               <div className="mr-2 flex gap-3 ">
                 <SearchBar />
-                <button className="btn btn-neutral rounded-2xl hidden sm:flex">
-                  <MdLibraryAdd size={19} /> Add Job
-                </button>
+                <Link
+                  to="/add-job"
+                  className="btn btn-neutral rounded-2xl hidden sm:flex"
+                >
+                  <MdLibraryAdd size={19} /> Post a Job
+                </Link>
               </div>
 
-              <div className="dropdown dropdown-end">
+              <div className="dropdown dropdown-end z-50">
                 <div
                   tabIndex={0}
                   role="button"
@@ -89,9 +94,9 @@ const Navbar = () => {
                     <img
                       alt="User Profile"
                       src={
-                        user?.photoURL
-                          ? user?.photoURL
-                          : "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                        user?.photoURL ||
+                        user?.providerData?.[0]?.photoURL ||
+                        "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
                       }
                       className="rounded-full"
                     />

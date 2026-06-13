@@ -1,0 +1,184 @@
+[
+  {
+    "_id": "6a2a6118fb20f9cc29f38fcb",
+    "job_title": "Need PSD to HTML developer",
+    "deadline": "2026-06-11T07:17:23.439Z",
+    "category": "Web Development",
+    "min_price": "400",
+    "max_price": "600",
+    "description": "khub dorkar aya poro",
+    "buyer": {
+      "email": "salva150202@gmail.com",
+      "name": "Sergio Marquina",
+      "photo": "https://lh3.googleusercontent.com/a/ACg8ocIH7VdcG5x2SFqRYL0qrkMMpmv5p3"
+    }
+  },
+  {
+    "_id": "6a2a6118fb20f9cc29f38fcc",
+    "job_title": "React Landing Page Development",
+    "deadline": "2026-06-20T10:00:00.000Z",
+    "category": "Web Development",
+    "min_price": "300",
+    "max_price": "500",
+    "description": "Landing page with modern UI",
+    "buyer": {
+      "email": "client1@example.com",
+      "name": "Tokyo User",
+      "photo": "https://randomuser.me/api/portraits/men/32.jpg"
+    }
+  },
+  {
+    "_id": "6a2a6118fb20f9cc29f38fcd",
+    "job_title": "Next.js Portfolio Website",
+    "deadline": "2026-06-25T12:00:00.000Z",
+    "category": "Web Development",
+    "min_price": "250",
+    "max_price": "450",
+    "description": "Portfolio with responsive design",
+    "buyer": {
+      "email": "client2@example.com",
+      "name": "Berlin Designer",
+      "photo": "https://randomuser.me/api/portraits/women/45.jpg"
+    }
+  },
+  {
+    "_id": "6a2a6118fb20f9cc29f38fce",
+    "job_title": "E-commerce Website with Node.js",
+    "deadline": "2026-07-01T09:30:00.000Z",
+    "category": "Web Development",
+    "min_price": "500",
+    "max_price": "900",
+    "description": "Full-stack e-commerce platform",
+    "buyer": {
+      "email": "client3@example.com",
+      "name": "New York Buyer",
+      "photo": "https://randomuser.me/api/portraits/men/12.jpg"
+    }
+  },
+  {
+    "_id": "6a2a6118fb20f9cc29f38fcf",
+    "job_title": "Logo Design for Startup",
+    "deadline": "2026-06-18T08:00:00.000Z",
+    "category": "Graphic Design",
+    "min_price": "100",
+    "max_price": "200",
+    "description": "Minimalist logo design",
+    "buyer": {
+      "email": "client4@example.com",
+      "name": "Lisbon Artist",
+      "photo": "https://randomuser.me/api/portraits/women/21.jpg"
+    }
+  },
+  {
+    "_id": "6a2a6118fb20f9cc29f38fd0",
+    "job_title": "Social Media Banner Pack",
+    "deadline": "2026-06-25T15:00:00.000Z",
+    "category": "Graphic Design",
+    "min_price": "150",
+    "max_price": "300",
+    "description": "Banner pack for Facebook & Instagram",
+    "buyer": {
+      "email": "client5@example.com",
+      "name": "Madrid Marketer",
+      "photo": "https://randomuser.me/api/portraits/men/55.jpg"
+    }
+  },
+  {
+    "_id": "6a2a6118fb20f9cc29f38fd1",
+    "job_title": "Business Card & Flyer Design",
+    "deadline": "2026-06-30T11:00:00.000Z",
+    "category": "Graphic Design",
+    "min_price": "80",
+    "max_price": "180",
+    "description": "Corporate branding materials",
+    "buyer": {
+      "email": "client6@example.com",
+      "name": "Paris Entrepreneur",
+      "photo": "https://randomuser.me/api/portraits/women/67.jpg"
+    }
+  },
+  {
+    "_id": "6a2a6118fb20f9cc29f38fd2",
+    "job_title": "UI/UX Design for Mobile App",
+    "deadline": "2026-07-05T14:00:00.000Z",
+    "category": "Graphic Design",
+    "min_price": "400",
+    "max_price": "700",
+    "description": "Mobile app wireframes and UI kit",
+    "buyer": {
+      "email": "client7@example.com",
+      "name": "London Developer",
+      "photo": "https://randomuser.me/api/portraits/men/77.jpg"
+    }
+  },
+  {
+    "_id": "6a2a6118fb20f9cc29f38fd3",
+    "job_title": "SEO Optimization for Blog",
+    "deadline": "2026-06-22T13:00:00.000Z",
+    "category": "Digital Marketing",
+    "min_price": "200",
+    "max_price": "400",
+    "description": "Keyword research and on-page SEO",
+    "buyer": {
+      "email": "client8@example.com",
+      "name": "Rome Blogger",
+      "photo": "https://randomuser.me/api/portraits/women/88.jpg"
+    }
+  },
+  {
+    "_id": "6a2a6118fb20f9cc29f38fd4",
+    "job_title": "Facebook Ads Campaign",
+    "deadline": "2026-06-28T16:00:00.000Z",
+    "category": "Digital Marketing",
+    "min_price": "300",
+    "max_price": "600",
+    "description": "Targeted ads for product launch",
+    "buyer": {
+      "email": "client9@example.com",
+      "name": "Dubai Seller",
+      "photo": "https://randomuser.me/api/portraits/men/99.jpg"
+    }
+  },
+  {
+    "_id": "6a2a6118fb20f9cc29f38fd5",
+    "job_title": "Instagram Influencer Marketing",
+    "deadline": "2026-07-05T18:00:00.000Z",
+    "category": "Digital Marketing",
+    "min_price": "400",
+    "max_price": "800",
+    "description": "Collaboration with niche influencers",
+    "buyer": {
+      "email": "client10@example.com",
+      "name": "Seoul Influencer",
+      "photo": "https://randomuser.me/api/portraits/women/11.jpg"
+    }
+  },
+  {
+    "_id": "6a2a6118fb20f9cc29f38fd6",
+    "job_title": "Email Marketing Automation",
+    "deadline": "2026-07-10T20:00:00.000Z",
+    "category": "Digital Marketing",
+    "min_price": "250",
+    "max_price": "500",
+    "description": "Automated email sequences",
+    "buyer": {
+      "email": "client11@example.com",
+      "name": "Toronto Marketer",
+      "photo": "https://randomuser.me/api/portraits/men/13.jpg"
+    }
+  },
+  {
+    "_id": "6a2a6118fb20f9cc29f38fd7",
+    "job_title": "YouTube Video Promotion",
+    "deadline": "2026-07-12T19:00:00.000Z",
+    "category": "Digital Marketing",
+    "min_price": "350",
+    "max_price": "700",
+    "description": "Boost views and engagement",
+    "buyer": {
+      "email": "client12@example.com",
+      "name": "Sydney Creator",
+      "photo": "https://randomuser.me/api/portraits/women/14.jpg"
+    }
+  }
+]
